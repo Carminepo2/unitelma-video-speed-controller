@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Unitelma Video Speed Controller",
+  "description": "This extension allows you to control the speed of the video player on Unitelma e-learning platform.",
+  "version": "0.1.0",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://kaf-113prod.elearning.unitelma.it/browseandembed/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
