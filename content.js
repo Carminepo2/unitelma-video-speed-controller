@@ -118,6 +118,14 @@ function createDropdownMenu() {
   ul.setAttribute("role", "menu");
   ul.setAttribute("aria-labelledby", BUTTON_LABEL);
   ul.id = "ui-id-2";
+
+  window.document.addEventListener("click", (event) => {
+    const isClickInside = ul.contains(event.target) || event.target === ul;
+    if (!isClickInside && ul.classList.contains("open")) {
+      toggleMenu(ul);
+    }
+  });
+
   return ul;
 }
 
