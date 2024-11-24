@@ -126,6 +126,12 @@ function createDropdownMenu() {
     }
   });
 
+  window.document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && ul.classList.contains("open")) {
+      toggleMenu(ul);
+    }
+  });
+
   return ul;
 }
 
